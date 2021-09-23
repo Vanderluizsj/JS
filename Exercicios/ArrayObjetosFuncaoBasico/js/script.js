@@ -4,8 +4,6 @@ function meuEscopo(){
 
     const pessoas = [];
 
-    form.onsubmit;
-
     function recebeEventoForm (evento) {
         evento.preventDefault();
         console.log('form não enviado')
