@@ -1,26 +1,25 @@
 console.log('Ola!!!')
 function meuEscopo(){
-    const form = document.querySelector('.dados');
+    const form = document.querySelector('.form');
     const resultado = document.querySelector('.resultado');
     const btn = document.querySelector('.btn');
 
 
-    function calculaIMC(evento){
-    
-        const peso = form.querySelector('.peso');
-        const altura = form.querySelector('.altura');
+    form.addEventListener ('submit', function(e) {
+        e.preventDefault();
+        const inputPeso = e.target.querySelector('.peso');
+        const inputAltura = e.target.querySelector('.peso');
 
-        var peso1 = peso.nodeValue;
-        var altura1 = altura.nodeValue;
+        var peso = Number(inputPeso.Value);
+        var altura = Number(inputAltura.Value);
 
         const resultado = peso1 * altura1**2;
-        console.log(peso);
-        console.log(altura);
+        console.log(peso1);
+        console.log(altura1);
         console.log(resultado);
         resultado.innerHTML = String(resultado);
-    };
-    btn.addEventListener("click", calculaIMC);
-
+    
+    });
 
 }
 
